@@ -1,0 +1,43 @@
+@import url("./drag_container.css");
+
+.progress-container {
+    width: var(--container-width);
+    height: 70px;
+    border: 2px solid var(--main-bg-color);
+    border-radius: 10px ;
+    position: relative;
+}
+
+.bg-progress {
+    background: var(--main-bg-color);
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    transform-origin: left;
+    transition: width .25s linear;
+    position: absolute;
+}
+
+.inner-container-progress {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    padding: 10px;
+    gap: 5px;
+}
+
+.percent-container {
+    font-size: 12px;
+    opacity: 0.8;
+}
+
+.percent-progress {
+    height: 4px;
+    width: 480px;
+    background: #0319f4;
+    border-radius: 2px;
+    transform-origin: left;
+    transform: scaleX(0);
+    transition: transform 0.25s linear;
+}
